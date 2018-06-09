@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寻找自己的职业道路</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body {
+            /*border: 1px solid red;*/
+            width: 100%;
+            height: 100%;
+        }
+        .panel {
+            width: 100%;
+            height: 100%;
+            /*border: 1px solid red;*/
+        }
+        .top {
+            width: 90%;
+            height: 40px;
+            margin-top: 10px;
+            /*border: 1px solid red;*/
+        }
+        .mim {
+            width: 70%;
+            height: 20px;
+            /*border: 1px solid red;*/
+            padding-left: 64px;
+        }
+        .bottom {
+            width: 100%;
+            height: 78%;
+            /*border: 1px solid red;*/
+        }
+        .left {
+            width: 48%;
+            height: 100%;
+            float: left;
+            /*border: 1px solid red;*/
+            margin-left: 44px;
+            margin-top: 12px;
+        }
+        .right {
+            width: 48%;
+            height: 100%;
+            float: right;
+            /*border: 1px solid red;*/
+        }
+        .top .title {
+            width: 6%;
+            height: 90%;
+            /*border: 1px solid red;*/
+            color: #257dc3;
+            float: left;
+            padding-top: 3px;
+        }
+        .top .box {
+            width: 50%;
+            height: 90%;
+            /*border: 1px solid red;*/
+            color: darkgrey;
+            float: left;
+            padding-top: 4px;
+        }
+        .left .title {
+            width: 80%;
+            height: 90px;
+            /*border: 1px solid red;*/
+            margin-left: 20px;
+            margin-top: 18px;
+        }
+        .pic {
+            width: 90%;
+            height: 60%;
+            /*border: 1px solid red;*/
+            margin-left: 20px;
+        }
+        .data {
+            width: 90%;
+            height: 30%;
+            /*border: 1px solid red;*/
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        span {
+            font-size: 22px;
+            font-weight: 900;
+        }
+        input {
+            width: 400px;
+            height: 22px;
+            border: 1px solid gray;
+        }
+        .mim span {
+            font-weight: 400;
+            display: inline-block;
+            margin-right: 40px;
+            font-size: 20px;
+        }
+        .bottom .title {
+            font-size: 22px;
+            color: #257dc3;
+        }
+        .bottom .title span {
+            font-size: 16px;
+            font-weight: 400;
+            color: black;
+        }
+        .bottom .title p {
+            font-size: 14px;
+            color: darkgrey;
+        }
+        .spe {
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .pic img {
+            width: 70%;
+        }
+        .data img {
+            width: 30%;
+        }
+        .left .title img {
+            width: 30%;
+            display: block;
+            margin-top: 10px;
+        }
+        .right .data {
+            height: 200px;
+            padding-left: 20px;
+        }
+        .right .pic {
+            height: 260px;
+        }
+    </style>
+</head>
+<body>
+<div class="panel">
+    <div class="top">
+        <div class="title">
+            <span>Data</span>
+        </div>
+        <div class="box">
+            <input type="text">
+        </div>
+    </div>
+    <div class="mim">
+        <span>职位</span>
+        <span>技术</span>
+    </div>
+    <div class="bottom">
+        <div class="left">
+            <div class="title"  onclick="window.open('http://139.199.109.224:3000/post')">Python
+                <span class="spe">(计算机程序设计语言)</span>
+                <p>
+                    <span>Python</span>
+                    是一种面向对象的解释型设计程序语言,由荷兰人
+                    Guido van Rossum于1998年发明,
+                    <span>Python</span>
+                    是纯粹的自由软件...
+                </p>
+            </div>
+            <div class="title" onclick="window.open('http://139.199.109.224:3000/Recommend')">技术路线缩略图
+                <div>
+                    <img src="images/3.PNG">
+                </div>
+            </div>
+            <div class="title" onclick="window.open('http://139.199.109.224:3000/post')">Python简析
+                <p>小平同志说:"社会主义的本质是解放生产力",而Python
+                    就是一门可以解放程序员生产力的语言.</p>
+                <p>Python简单,所以学起来快,有经验的程序员一周见
+                    上手Python.Python强大,python能做的事情从web开发, 科学计算,机器学习...</p>
+            </div>
+            <div class="title">统计数据</div>
+        </div>
+        <div class="right">
+            <div class="pic">
+                <img src="images/1.PNG" onclick="window.open('http://139.199.109.224:3000/analysis')">
+            </div>
+            <div class="data">
+                <img src="images/2.PNG">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
