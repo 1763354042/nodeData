@@ -5,7 +5,6 @@
   <title>寻找自己的职业道路</title>
 </head>
 <link rel="stylesheet" href="/stylesheets/index.css" type="text/css"/>
-<script type="text/javascript" src="/javascripts/index.js"></script>
 <body>
 <div id="indexTop">
   <ul id="indexTopUl">
@@ -26,7 +25,7 @@
     <ol class="indexTopOl1" id="indexTopOL3">找数据</ol>
   </ul>
   <div id="indexTopSearch">
-    <input id="indexTopSearchInput" >
+    <input id="indexTopSearchInput"/>
     <button id="indexTopSearchBtn" value="Data">Data</button>
   </div>
 </div>
@@ -79,5 +78,43 @@
     </ol>
   </ul>
 </div>
+<script src="/javascripts/echarts.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    window.onload=function () {
+        var oStatus=document.getElementsByClassName('indexTopOl1');
+        // var oStatusImg=document.getElementsByClassName('indexTopOl2');
+        var keyWordStatus=1;
+        for(var i=0;i<3;i++){
+            oStatus[i].index=i;
+            oStatus[i].onclick=function(){
+                for(j=0;j<3;j++){
+                    oStatus[j].style.background='none';
+                    oStatus[j].style.color='#FFFFFF';
+                    // oStatusImg[j].style.display='none';
+                }
+                oStatus[this.index].style.background='#FFFFFF';
+                oStatus[this.index].style.color='#0307FF';
+                keyWordStatus=Number(this.index);
+            }
+        }
+        var oBtn=document.getElementById('indexTopSearchBtn');
+        oBtn.onclick=function(){
+            var keyWord=document.getElementById('indexTopSearchInput').value;
+            axios.get('http://www.wangzhongkai.cn/keyWord',{params:{"keyWord":keyWord}})
+                .then(function (response) {
+                    console.log(response);
+                    window.location.href="http://www.wangzhongkai.cn/page";
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+    }
+
+</script>
 </body>
 </html>
+
+
+
